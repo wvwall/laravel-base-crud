@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('main')
-    <a href="{{route('comics.create')}}">CREA FUMETTO</a>
+    
+    <a href="{{route('comics.edit', ['comic' => $comic->id])}}">-EDIT</a>
         <div class="card-single">
             <a href="">
                 <img src="{{$comic->thumb}}" alt="{{$comic->title}}">

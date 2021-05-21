@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('main')
+<a href="{{route('comics.create')}}">CREA FUMETTO</a> 
     @foreach($comics as $comic)
         <div class="card">
             <a href="{{route('comics.show', ['comic' => $comic->id])}}">
@@ -9,6 +10,7 @@
                 <h4>{{$comic->type}} - {{$comic->price}}$  {{$comic->series}}</h4>
                 <h5>{{$comic->sale_date}}</h5>
                 <p>{{$comic->description}}</p>
+               
             </a>
         </div>
     @endforeach
