@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('main')
-        <div>
-            <form  class="card-form" action="{{route('comics.update',['comic'=>$comic->id])}}" method="post">
+<div class="spacee"></div>
+        <div class="card-form">        
+            <form  class="form" action="{{route('comics.update',['comic'=>$comic->id])}}" method="post">
                 @csrf 
                 @method('PATCH')
                 <input type="text" name="title" value="{{$comic->title}}" id="">
@@ -15,11 +16,7 @@
 
                 <input type="submit" value="SEND" >
             </form>
-            <form action="{{route('comics.destroy',['comic'=>$comic->id])}}" method="post">
-                @csrf 
-                @method('DELETE')
-                <input type="submit" value="DELETE">
-            </form>
+            
                
         </div>
    

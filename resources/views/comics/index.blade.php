@@ -1,17 +1,24 @@
 @extends('layouts.app')
 
 @section('main')
-<a href="{{route('comics.create')}}">CREA FUMETTO</a> 
+
+   <!--  <a class="create" href="{{route('comics.create')}}"><span>Add Comic</span></a> -->
+
+ <div class="cards">
     @foreach($comics as $comic)
         <div class="card">
             <a href="{{route('comics.show', ['comic' => $comic->id])}}">
-                <img src="{{$comic->thumb}}" alt="{{$comic->title}}">
-                <h3>{{$comic->title}}</h3>
-                <h4>{{$comic->type}} - {{$comic->price}}$  {{$comic->series}}</h4>
-                <h5>{{$comic->sale_date}}</h5>
-                <p>{{$comic->description}}</p>
-               
+                <img src="{{$comic->thumb}}" alt="{{$comic->title}}"> 
             </a>
+            <div class="details">
+               
+                <a href="{{route('comics.show', ['comic' => $comic->id])}}">Details</a>
+            </div>
+            
         </div>
     @endforeach
+    <a class="create" href="{{route('comics.create')}}"><span>Add Comic</span></a>
+ </div>
+ 
+    
 @endsection

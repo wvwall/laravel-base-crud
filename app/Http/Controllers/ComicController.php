@@ -48,6 +48,7 @@ class ComicController extends Controller
         $new_comic_obj->type = $data["type"];
         $new_comic_obj->save();
 
+        $comic = Comic::orderby('id','desc')->first();
         return redirect()->route('comics.show', compact('comic'));
     }
 
