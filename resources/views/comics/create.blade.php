@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('main')
-        <div>
-            <form  class="card-form" action="{{route('comics.store')}}" method="post">
+<div class="spacee">
+    <a class="home" href="{{route('comics.index')}}"><span>HOME</span></a>
+</div>
+        <div class="card-form">
+            <form  class="form" action="{{route('comics.store')}}" method="post">
                 @csrf 
                 @method('POST')
                 <input type="text" name="title" placeholder="Title" id="">

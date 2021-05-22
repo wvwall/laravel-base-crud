@@ -2,12 +2,11 @@
 
 @section('main')
     
-<div class="space"></div>
+<div class="space">
+    <a class="home" href="{{route('comics.index')}}"><span>HOME</span></a>
+</div>
         <div class="card-single">
-           
                 <img src="{{$comic->thumb}}" alt="{{$comic->title}}">
-          
-               
                 <div class="details-single">
                     <h3>{{$comic->title}}</h3>
                     <h4>{{$comic->type}} - {{$comic->price}}$ - {{$comic->series}}</h4>

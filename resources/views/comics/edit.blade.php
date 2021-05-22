@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('main')
-<div class="spacee"></div>
+<div class="spacee">
+    <a class="home" href="{{route('comics.index')}}"><span>HOME</span></a>
+</div>
         <div class="card-form">        
             <form  class="form" action="{{route('comics.update',['comic'=>$comic->id])}}" method="post">
                 @csrf 
