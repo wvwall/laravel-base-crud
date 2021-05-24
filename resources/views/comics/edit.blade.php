@@ -16,7 +16,7 @@
                 <input type="date" name="sale_date" value="{{$comic->sale_date}}"  id="">
                 <input type="text" name="type" value="{{$comic->type}}"  id="">
 
-                <input type="submit" value="SEND" >
+                <input class="send" type="submit" value="SEND" >
             </form>
             
                

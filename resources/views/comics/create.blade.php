@@ -4,6 +4,14 @@
 <div class="spacee">
     <a class="home" href="{{route('comics.index')}}"><span>HOME</span></a>
 </div>
+@if ($errors->any())  
+ <div class="alert alert-danger"> 
+    <ul>
+        @foreach ($errors->all() as $error)    
+            <li>{{$error}}</li>
+        @endforeach
+    </ul> 
+</div>@endif
         <div class="card-form">
             <form  class="form" action="{{route('comics.store')}}" method="post">
                 @csrf 
@@ -16,7 +24,7 @@
                 <input type="date" name="sale_date" placeholder="Date" id="">
                 <input type="text" name="type" placeholder="Comic book" id="">
 
-                <input type="submit" value="SEND" name=>
+                <input class="send" type="submit" value="SEND" name=>
             </form>
                
         </div>
